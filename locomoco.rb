@@ -5,20 +5,20 @@
 class Locomoco < Formula
   desc ""
   homepage "https://github.com/faceyacc/homebrew-tools"
-  version "0.0.8"
+  version "0.0.9"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/faceyacc/locomoco/releases/download/v0.0.8/locomoco_Darwin_arm64.tar.gz"
-      sha256 "30a8cf64e5dea15f9d872116ef910fd02e5d6c0d010ef9129109ec665d016b57"
+    if Hardware::CPU.intel?
+      url "https://github.com/faceyacc/locomoco/releases/download/v0.0.9/locomoco_Darwin_x86_64.tar.gz"
+      sha256 "746125d8840654786dc212ab1a7493233e89e7dd10985a002293eb3943594027"
 
       def install
         bin.install "locomoco"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/faceyacc/locomoco/releases/download/v0.0.8/locomoco_Darwin_x86_64.tar.gz"
-      sha256 "3bd0577aa9d654205221eb301e724ba3008f59eeb9a08d46143aa222f179b29c"
+    if Hardware::CPU.arm?
+      url "https://github.com/faceyacc/locomoco/releases/download/v0.0.9/locomoco_Darwin_arm64.tar.gz"
+      sha256 "7f3579e97b8752775b462339ba023f5affe555347507abdb1197ae419b46769f"
 
       def install
         bin.install "locomoco"
@@ -28,16 +28,16 @@ class Locomoco < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/faceyacc/locomoco/releases/download/v0.0.8/locomoco_Linux_arm64.tar.gz"
-      sha256 "0032992ee80d0a6ef7b99c71ec28ebd9324ae58b8ee8eea54ce4dc481d0aba4f"
+      url "https://github.com/faceyacc/locomoco/releases/download/v0.0.9/locomoco_Linux_arm64.tar.gz"
+      sha256 "ef26cc70e6231bb730bd04c2be3651e4e9d730dc4b1b200d62c5d994cafc3129"
 
       def install
         bin.install "locomoco"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/faceyacc/locomoco/releases/download/v0.0.8/locomoco_Linux_x86_64.tar.gz"
-      sha256 "e339e1682779a77930c46e9be4880ada90000e7a3b2e86ee5769f80b593d14c4"
+      url "https://github.com/faceyacc/locomoco/releases/download/v0.0.9/locomoco_Linux_x86_64.tar.gz"
+      sha256 "c31d54ab57a49c86bb42b5ebe46a1ad2fe530fb86e502edc82dba86056199e6c"
 
       def install
         bin.install "locomoco"
