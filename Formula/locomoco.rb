@@ -5,11 +5,11 @@
 class Locomoco < Formula
   desc "A simple GitHub contribution and repo viewer."
   homepage "https://github.com/faceyacc/homebrew-tools"
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
-    url "https://github.com/faceyacc/locomoco/releases/download/v0.0.1/locomoco_0.0.1_darwin_amd64.tar.gz"
-    sha256 "02da31008e747c5d69724db58e6dd30595d4f5cb795cf5316b74b27a489de226"
+    url "https://github.com/faceyacc/locomoco/releases/download/v0.0.2/locomoco_0.0.2_darwin_amd64.tar.gz"
+    sha256 "b0e75078349016ae44602e1f9ab90e3e4e72a1ec3b312627cb906714acc92c4f"
 
     def install
       bin.install "locomoco"
@@ -28,8 +28,8 @@ class Locomoco < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/faceyacc/locomoco/releases/download/v0.0.1/locomoco_0.0.1_linux_amd64.tar.gz"
-      sha256 "a2f970a1875f57ae6d043159571d3729c1950fd01f2d9822f395c03c074e1e90"
+      url "https://github.com/faceyacc/locomoco/releases/download/v0.0.2/locomoco_0.0.2_linux_amd64.tar.gz"
+      sha256 "0fbf862f4f7e633eb424c205530f8c519fe4d4bef71d7fcccac2d748da42b5f5"
 
       def install
         bin.install "locomoco"
