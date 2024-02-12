@@ -5,20 +5,20 @@
 class Locomoco < Formula
   desc ""
   homepage "https://github.com/faceyacc/homebrew-tools"
-  version "0.0.9"
+  version "0.0.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/faceyacc/locomoco/releases/download/v0.0.9/locomoco_Darwin_x86_64.tar.gz"
-      sha256 "746125d8840654786dc212ab1a7493233e89e7dd10985a002293eb3943594027"
+      url "https://github.com/faceyacc/locomoco/releases/download/v0.0.1/locomoco_Darwin_x86_64.tar.gz"
+      sha256 "5def6782c129a10c7ab286b5405a24c7f043cc2cbf942350919d9b10b84172bb"
 
       def install
         bin.install "locomoco"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/faceyacc/locomoco/releases/download/v0.0.9/locomoco_Darwin_arm64.tar.gz"
-      sha256 "7f3579e97b8752775b462339ba023f5affe555347507abdb1197ae419b46769f"
+      url "https://github.com/faceyacc/locomoco/releases/download/v0.0.1/locomoco_Darwin_arm64.tar.gz"
+      sha256 "1a93943f47c28da7ddfebebf9288d7dd36217d638747b0fd792d8f47bac43c0f"
 
       def install
         bin.install "locomoco"
@@ -27,17 +27,17 @@ class Locomoco < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/faceyacc/locomoco/releases/download/v0.0.9/locomoco_Linux_arm64.tar.gz"
-      sha256 "ef26cc70e6231bb730bd04c2be3651e4e9d730dc4b1b200d62c5d994cafc3129"
+    if Hardware::CPU.intel?
+      url "https://github.com/faceyacc/locomoco/releases/download/v0.0.1/locomoco_Linux_x86_64.tar.gz"
+      sha256 "29188f1e563abefeebc72b064f8429bace1b0cd90ce082d758f661de689f939a"
 
       def install
         bin.install "locomoco"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/faceyacc/locomoco/releases/download/v0.0.9/locomoco_Linux_x86_64.tar.gz"
-      sha256 "c31d54ab57a49c86bb42b5ebe46a1ad2fe530fb86e502edc82dba86056199e6c"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/faceyacc/locomoco/releases/download/v0.0.1/locomoco_Linux_arm64.tar.gz"
+      sha256 "9edddd90340345884bbbe0e535d17cddcb677e14be1f248b96439523ad28a2c6"
 
       def install
         bin.install "locomoco"
